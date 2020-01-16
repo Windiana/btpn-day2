@@ -14,14 +14,19 @@ module.exports = {
       date : req.body.date,
       description : req.body.description,
       notes : note.toUpperCase(),
-      balance : req.body.balance
+      balance : req.body.balance,
+      amount : req.body.amount
     })
-      .then(function (transaction) {
-        res.status(200).json({
-          status: 'ok',
-          data:transaction
-        })
-      }).catch(function (err) {
+    .then(function (transaction) {
+      res.status(200).json({
+        status: 'ok',
+        data:transaction
+      })
+    })
+    .catch(function (err) {
+      res.status(400).json({
+        status: (err.message)
+      })
     })
   },
   hapus: function (req, res) {

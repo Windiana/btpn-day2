@@ -1,4 +1,6 @@
 var models = require('../models')
+const bcrypt = require('bcrypt');
+const salt = bcrypt.genSaltSync(10);
 module.exports = {
   list: function (res) {
     models.Users.findAll()
@@ -13,7 +15,9 @@ module.exports = {
       email : req.body.email,
       name : req.body.name,
       birthdate : req.body.birthdate,
-      balance : req.body.balance
+      balance : req.body.balance,
+      address : req.body.address,
+      password : req.body.password
     })
       .then(function (user) {
         res.status(200).json({
@@ -21,6 +25,9 @@ module.exports = {
           data:user
         })
       }).catch(function (err) {
+      res.status(400).json({
+        status: (err.message)
+      })
     })
   },
   hapus: function (req, res) {
@@ -53,5 +60,41 @@ module.exports = {
         data:user
       })
     })
+  },
+  regis: (req,res) =>{
+    let data = req.body;
+    let password = bcrypt.hashSync(data.password, salt);
+    models['Users'].create({
+      email : data.email,
+      name : data.birthdate,
+      birthdate : data.birthdate,
+      address : data.address,
+      password : password,
+    }).then(function (user) {
+      res.status(200).json({
+        status: 'ok',
+        data:user
+      })
+    }).catch(function (err) {
+      res.status(400).json({
+        status: (err.message)
+      })
+    })
+  },
+  login:(req,res) =>{
+    let data = req.body;
+    models['Users'].findOne({
+      where:{
+        email : data.email
+      }
+    })
+      .then(function (user) {
+        if(user){
+          let result =bcrypt.compareSync(data.password,user.password);
+          if (result){
+
+          }
+        }
+      })
   }
 }

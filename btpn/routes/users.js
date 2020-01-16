@@ -19,4 +19,12 @@ router.put('/:id', function(req, res, next) {
   userController.update(req, res)
 });
 
+router.post('/regis', function(req, res, next) {
+  userController.regis(req, res)
+});
+
+router.post('/login', function(req, res, next) {
+  userController.login(req, res)
+});
+
 module.exports = router;
