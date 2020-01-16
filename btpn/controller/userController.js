@@ -1,4 +1,5 @@
 var models = require('../models')
+var jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const salt = bcrypt.genSaltSync(10);
 module.exports = {
@@ -92,8 +93,12 @@ module.exports = {
         if(user){
           let result =bcrypt.compare(data.password,user.password);
           if (result){
+            var token = jwt.sign({
+              id: user.id, email: user.email
+            },'aboe')
           }
           res.status(200).json({
+            token:token,
             message : "anda sudah login"
           })
         }
