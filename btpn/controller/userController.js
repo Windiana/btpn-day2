@@ -95,7 +95,7 @@ module.exports = {
           if (result){
             var token = jwt.sign({
               id: user.id, email: user.email
-            },'aboe')
+            },process.env.TOKEN)
           }
           res.status(200).json({
             token:token,
