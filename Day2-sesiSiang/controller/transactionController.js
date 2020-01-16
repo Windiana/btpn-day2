@@ -15,7 +15,7 @@ module.exports = {
                 id:req.params.id
             }
         }).then(function (user) {
-            res.status(200).json({
+            res.status( 200).json({
                 status:"OK!",
                 data: user
             })
@@ -25,6 +25,7 @@ module.exports = {
         models.Transactions.create({
             date : req.body.date,
             description: req.body.description,
+            amount:req.body.amount,
             notes: req.body.notes.toUpperCase(),
             balance: req.body.balance
         })
@@ -35,13 +36,16 @@ module.exports = {
                 })
             })
             .catch(function (err) {
-
+                res.status(400).json({
+                    status:err.message
+                })
             })
     },
     updateTransaction:function (req,res) {
         models.Transactions.update({
             date : req.body.date,
             description: req.body.description,
+            amount:req.body.amount,
             notes: req.body.notes.toUpperCase(),
             balance: req.body.balance
         },{
@@ -54,7 +58,9 @@ module.exports = {
                 })
             })
             .catch(function (err) {
-
+                res.status(400).json({
+                    status:err.message
+                })
             })
     },
     deleteTransaction: function (req, res) {

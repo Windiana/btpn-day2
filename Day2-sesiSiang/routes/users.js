@@ -28,4 +28,12 @@ router.delete('/:id',function (req,res) {
   userController.deleteUser(req, res)
 })
 
+router.post('/register',function (req,res) {
+  userController.register(req,res)
+})
+
+router.post('/login', function (req, res) {
+  userController.login(req,res)
+})
+
 module.exports = router;

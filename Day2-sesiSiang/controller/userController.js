@@ -1,4 +1,7 @@
 var models = require("../models")
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+var jwt = require('jsonwebtoken');
 
 module.exports = {
     getAllUsers:function (req, res) {
@@ -11,9 +14,7 @@ module.exports = {
     },
     getUser:function (req, res) {
         models.User.findOne({
-        where:{
-            id:req.params.id
-        }
+        where:{id:req.params.id}
         }).then(function (user) {
             res.status(200).json({
                 status:"OK!",
@@ -37,7 +38,9 @@ module.exports = {
                 })
             })
             .catch(function (err) {
-
+                res.status(400).json({
+                    status:err.message
+                })
             })
     },
     updateUser:function (req,res) {
@@ -56,7 +59,9 @@ module.exports = {
                 })
             })
             .catch(function (err) {
-
+                res.status(400).json({
+                    status:err.message
+                })
             })
     },
     deleteUser: function (req, res) {
@@ -68,6 +73,55 @@ module.exports = {
                     status:"Delete Success !",
                     data: user
                 })
+            })
+    },
+    register: (req,res) => {
+        var{email,name,birthdate,password} = req.body
+
+        bcrypt.hash(password, saltRounds, function(err, hashPassword) {
+            // Store hash in your password DB.
+            models.User.create({
+                email,
+                name,
+                birthdate,
+                password: hashPassword
+            })
+                .then(function (user) {
+                    //
+                    res.status(201).json(user)
+                })
+                .catch(function (err) {
+                    res.status(400).json({
+                        status:err.message
+                    })
+                })
+        });
+    },
+    login:(req, res) => {
+        var{email, password} = req.body
+
+        models.User.findOne({
+            where:{
+                email:email
+            }
+        })
+            .then(user =>{
+                if(user){
+                    // dapetin dari plain password yang di hash
+                    // dapetin dari database, password yang sudah di hash sebelumnya
+                    bcrypt.compare(password, user.password,function (err, result) {
+                        if(result){
+                            // geterate token by JWT
+                            var token = jwt.sign({
+                                id:user.id,
+                                email:user.email
+                            },process.env.SECRET_TOKEN);
+                            res.status(200).json({
+                                token: token
+                            })
+                        }
+                    })
+                }
             })
     }
 
