@@ -90,10 +90,12 @@ module.exports = {
     })
       .then(function (user) {
         if(user){
-          let result =bcrypt.compareSync(data.password,user.password);
+          let result =bcrypt.compare(data.password,user.password);
           if (result){
-
           }
+          res.status(200).json({
+            message : "anda sudah login"
+          })
         }
       })
   }
