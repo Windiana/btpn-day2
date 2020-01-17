@@ -4,16 +4,15 @@ const saltRounds = 10
 const jwt = require('jsonwebtoken')
 const {Transactions, User} = require('../models')
 
-
 module.exports = {
-  list: function (res) {
-    User.findAll()
-      .then(function (users) {
-        res.status(200).json(users)
-      })
-      .catch(function (err) {
-        res.status(400).json(err)
-      });
+  list: function (res, next) {
+        User.findAll()
+          .then(function (users) {
+            res.status(200).json(users)
+          })
+          .catch(function (err) {
+            res.status(400).json(err)
+          })
   },
 
   add: function (req, res) {
@@ -121,7 +120,7 @@ module.exports = {
     })
       .then(function (user) {
         if(user){
-        password = req.body.password
+          password = req.body.password
           bcrypt.compare(password, user.password, function (err, result) {
           if(result){
             var token = jwt.sign({
@@ -129,7 +128,8 @@ module.exports = {
               email: user.email
             }, process.env.SECRET);
             res.status(200).json({
-              token:token
+              token:token,
+              message: "Anda Berhasil Masuk"
             })
           } else {
             res.status(400).json({
