@@ -3,8 +3,22 @@ module.exports = (sequelize, DataTypes) => {
   const Users = sequelize.define('Users', {
     email:{
       type : DataTypes.STRING,
-      validate:{
-        isEmail:true
+      validate: {
+        isEmail: {
+          args: true,
+          msg: "format email harus benar"
+        },
+        isUnique: function (value, next) {
+          Users.findOne({
+            where: {email: value},
+            attributes: ['email']
+          })
+            .done(function (err) {
+              if (err)
+                return next("email already exist")
+              next();
+            })
+        }
       }
     },
     name: DataTypes.STRING,
@@ -22,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING
   });
   Users.associate = function(models) {
-    // associations can be defined here
+   Users.hasMany(models.Transactions,{as:"transactions"})
   };
   return Users;
 };

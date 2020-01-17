@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var jwt = require('jsonwebtoken')
 
 var userController = require('../controller/userController')
+var verify = require('../verify/tokenVerify');
 
-router.get('/', function(req, res, next) {
-  userController.list(res)
+
+router.get('/', [verify.checkAuth], function(req, res, next) {
+  userController.list(req, res)
 });
 
 router.post('/', function(req, res, next) {

@@ -32,7 +32,12 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     }
-  }, {});
+  });
+
+  Transactions.beforeValidate((transactions)=>{
+    transactions.notes = transactions.notes.toUpperCase()
+    return transactions
+  })
   Transactions.associate = function(models) {
     // associations can be defined here
   };

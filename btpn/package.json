@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": " set TOKEN=aboe && nodemon ./bin/www"
+    "start": " set TOKEN=aboe && npx nodemon ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",

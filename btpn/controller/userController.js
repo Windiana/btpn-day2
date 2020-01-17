@@ -1,14 +1,27 @@
 var models = require('../models')
 var jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const {Transactions} = require("../models");
 const salt = bcrypt.genSaltSync(10);
 module.exports = {
-  list: function (res) {
-    models.Users.findAll()
+  list: function (req, res, next) {
+    models.Users.findAll({
+      include: [{
+        model:Transactions,
+        attributes:["id","amount"],
+        required:true,
+        as: "transactions",
+      }]
+    })
       .then(function (users) {
-        res.status(200).json(users)
+        console.log("cba")
+        res.status(200).json({
+          users
+        })
       })
       .catch(function (err) {
+        console.log(err)
+        res.json({error: true})
       })
   },
   add:function (req,res) {

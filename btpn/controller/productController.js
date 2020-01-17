@@ -9,11 +9,10 @@ module.exports = {
       })
   },
   add:function (req,res) {
-    let note = req.body.notes
     models.Transactions.create({
       date : req.body.date,
       description : req.body.description,
-      notes : note.toUpperCase(),
+      notes : req.body.notes,
       balance : req.body.balance,
       amount : req.body.amount
     })
