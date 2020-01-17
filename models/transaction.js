@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       validate : {
         isInt : {
           msg : "Balance must be a number"
-        }
+        },
       }
     }
   });
@@ -35,17 +35,23 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
   };
 
-  Transaction.beforeCreate(function(Transaction, options){
-    var tr = Transaction.note;
-    tr.toUpperCase();
-    return tr;
-    var upperCase = (note) => {
-      var note2 = note.toUpperCase();
-      return note2
-    };
-    return upperCase(transaction.notes).then(function(tr) {
-      transaction.notes = tr
-    })
+  // Transaction.beforeCreate(function(Transaction, options){
+  //   var tr = Transaction.note;
+  //   tr.toUpperCase();
+  //   return tr;
+  //   var upperCase = (note) => {
+  //     var note2 = note.toUpperCase();
+  //     return note2
+  //   };
+  //   return upperCase(transaction.notes).then(function(tr) {
+  //     transaction.notes = tr
+  //   })
+  // });
+
+  // Hooks
+  Transaction.beforeValidate((transactions) => {
+    transactions.notes = transactions.notes.toUpperCase();
+    return transactions
   });
 
 return Transaction;

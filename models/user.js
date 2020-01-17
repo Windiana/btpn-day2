@@ -7,9 +7,25 @@ module.exports = (sequelize, DataTypes) => {
       type : DataTypes.STRING,
       allowNull : false,
       validate : {
+        unique : true,
         isEmail : {
           args : true,
           msg : "Wrongs email"
+        },
+        isUnique : (value , next) => {
+            User.findOne({
+              where : {
+                email : value
+              }
+            }).then(function(result){
+              if(result === null){
+                return next()
+              }else {
+                return next(' Email already use')
+              }
+            }).catch(err =>{
+              return next(err)
+            })
         }
       }
     },
@@ -22,10 +38,15 @@ module.exports = (sequelize, DataTypes) => {
           msg: "Balance Must be an integer"
         },
       }
-    }
+    },
+    password : DataTypes.STRING
   }, {});
+
   User.associate = function(models) {
-    // associations can be defined here
+    User.belongsToMany(models.Book, {
+      through: models.UserBook,
+      foreignKey: "userId",
+    });
   };
   return User;
 };
