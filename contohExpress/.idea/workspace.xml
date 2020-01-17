@@ -16,7 +16,27 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="mishbachul_kawakib" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="origin/mishbachul_kawakib" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="SIGN_OFF_COMMIT" value="true" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -47,6 +67,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../contohExpress" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -74,6 +95,7 @@
       <workItem from="1579141265905" duration="9496000" />
       <workItem from="1579150984608" duration="1662000" />
       <workItem from="1579156389876" duration="6846000" />
+      <workItem from="1579164692771" duration="5955000" />
     </task>
     <servers />
   </component>
@@ -93,26 +115,30 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1579156445223" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1579161374439">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1579222619153">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1579161374439" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1579161374439">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1579222619153">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1579161374439" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1579161374439">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1579222619153">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1579161374439" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1579161374439">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1579222619153">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1579161374439" />
-    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579142504271">
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
+    <state x="184" y="27" key="SettingsEditor" timestamp="1579164707723">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1579142504271" />
+    <state x="184" y="27" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1579164707723" />
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579223227124">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1579223227124" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579146621082">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

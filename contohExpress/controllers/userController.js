@@ -74,6 +74,7 @@ module.exports = {
         })
       })
   },
+
   register: function(req,res){
     var password = req.body.password
     bcrypt.hash(password, saltRounds, function (err, hashPassword) {
@@ -101,6 +102,7 @@ module.exports = {
       }
     })
   },
+
   login: function(req, res){
     models.User.findOne({
       where: {
@@ -110,7 +112,7 @@ module.exports = {
       .then(function (user) {
         if(user){
         password = req.body.password
-        bcrypt.compare(password, user.password, function (err, result) {
+          bcrypt.compare(password, user.password, function (err, result) {
           if(result){
             var token = jwt.sign({
               id: user.id,
@@ -119,12 +121,14 @@ module.exports = {
             res.status(200).json({
               token:token
             })
+          } else {
+            res.status(400).json({
+              status: 'Tidak Dapat Masuk',
+              message: 'Email atau Password Salah'
+            })
           }
 
-          res.status(400).json({
-            status: 'error',
-            message: 'Token Tidak Ditemukan'
-          })
+
         })
 
       }
