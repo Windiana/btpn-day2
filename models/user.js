@@ -8,6 +8,17 @@ module.exports = (sequelize, DataTypes) => {
         isEmail:{
           args: true,
           msg: "format email salah"
+        },
+        isUniqueEmail: (value, next) => {
+          User.findOne({
+            where:{email: value},
+            attributes:['email']
+          })
+            .done(function (err) {
+              if (err)
+                return next("Email anda sudah digunakan")
+              next();
+            })
         }
       }
     },
@@ -25,7 +36,11 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    User.hasMany(models.Transactions, {as: "transactions"})
+    User.belongsToMany(models.Kelas,{
+      through:models.UserKelas,
+      foreignKey:"userId"
+    })
   };
   return User;
 };

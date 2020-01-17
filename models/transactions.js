@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
           msg: "data amount harus diisi numberik"
         },
         isAmountLessThanBalance(amount){
-          if(parseInt(amount) >= parseInt(this.balance)){
+          if(parseInt(amount) === parseInt(this.balance)){
             throw new Error("jumlah amount harus lebih kecil dari balance")
           }
         }
@@ -25,8 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         isIn:{
           args: [['DB','CR']],
           msg: "data notes harus diisi dengan DB/CR"
-        },
-        isUppercase:true
+        }
       }
     },
     balance:{
@@ -40,8 +39,14 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   }, {});
+
+  Transactions.beforeValidate((transactions,options)=>{
+    transactions.notes = transactions.notes.toUpperCase()
+    return transactions
+  })
+
   Transactions.associate = function(models) {
-    // associations can be defined here
+    Transactions.belongsTo(models.User,{foreignKey:"userId", as:"user"})
   };
   return Transactions;
 };

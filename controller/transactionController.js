@@ -26,7 +26,7 @@ module.exports = {
             date : req.body.date,
             description: req.body.description,
             amount:req.body.amount,
-            notes: req.body.notes.toUpperCase(),
+            notes: req.body.notes,
             balance: req.body.balance
         })
             .then(function (user) {
