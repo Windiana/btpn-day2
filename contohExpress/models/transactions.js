@@ -36,7 +36,14 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   }, {});
+
+  Transactions.beforeValidate((transactions, option) =>{
+    transactions.notes = transactions.notes.toUpperCase()
+    return transactions
+  });
+
   Transactions.associate = function(models) {
+    Transactions.belongsTo(models.User, {  as: "users" });
   };
   return Transactions;
 };

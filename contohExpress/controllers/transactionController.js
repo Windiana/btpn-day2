@@ -7,17 +7,17 @@ module.exports = {
         res.status(200).json(transactions)
       })
       .catch(function (err) {
+        res.status(400).json({
+          status: (err.message)
+        })
       })
   },
+
   add:function (req,res) {
-    let note = req.body.notes
     models.Transactions.create({
       date : req.body.date,
       description : req.body.description,
-      notes : note.toUpperCase()
-        /*note.addHook(async (notes, options) => {
-        notes: note.toUpperCase();
-      })*/,
+      notes : req.body.notes,
       balance : req.body.balance,
       amount: req.body.amount
     })
@@ -33,6 +33,7 @@ module.exports = {
       })
     })
   },
+
   delete: function (req, res) {
     models.Transactions.destroy({
       where:{
@@ -41,10 +42,12 @@ module.exports = {
     })
       .then(function (transaction) {
       res.status(200).json({
-        status: 'ok'
+        status: 'ok',
+        data: transaction
       })
     })
   },
+
   update: function (req, res) {
     console.log(req.body)
 
@@ -55,7 +58,8 @@ module.exports = {
       notes : req.body.notes,
       balance : req.body.balance,
       amount: req.body.amount
-    },{
+    },
+      {
       where:{
         id: req.params.id
       }

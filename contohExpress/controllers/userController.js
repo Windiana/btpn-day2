@@ -2,20 +2,22 @@ var models = require('../models')
 const bcrypt = require('bcrypt')
 const saltRounds = 10
 const jwt = require('jsonwebtoken')
-
+const {Transactions, User} = require('../models')
 
 
 module.exports = {
   list: function (res) {
-    models.User.findAll()
+    User.findAll()
       .then(function (users) {
         res.status(200).json(users)
-      }).catch(function (err) {
-    })
+      })
+      .catch(function (err) {
+        res.status(400).json(err)
+      });
   },
 
   add: function (req, res) {
-    models.User.create({
+    User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
@@ -35,24 +37,24 @@ module.exports = {
   },
 
   delete: function (req, res) {
-    models.User.destroy({
+    User.destroy({
       where:{
         id: req.params.id
       }
-    }).then(function (user) {
-      res.status(200).json({
+    })
+      .then(function (user) {
+        res.status(200).json({
         status: "Ok",
         data: user
+        })
       })
-    })
       .catch(function (err) {
-        console.log('======== err', err)
+        console.log(err)
       })
-
   },
 
   update: function (req, res) {
-    models.User.update({
+    User.update({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
@@ -79,9 +81,9 @@ module.exports = {
     var password = req.body.password
     bcrypt.hash(password, saltRounds, function (err, hashPassword) {
       if (!err) {
-        models.User.create({
+       User.create({
           firstName: req.body.firstName,
-          lastname: req.body.lastName,
+          lastName: req.body.lastName,
           address: req.body.address,
           email: req.body.email,
           balance: req.body.balance,
@@ -89,7 +91,15 @@ module.exports = {
           password: hashPassword
         })
           .then(function (user) {
-            res.status(200).json(user)
+            res.status(200).json({
+              status: "ok",
+              data: [{
+                'First Name': user.firstName,
+                'Last Name': user.lastName,
+                'Email': user.email,
+                'Address': user.address
+              }]
+            })
 
           })
           .catch(function (err) {
@@ -104,7 +114,7 @@ module.exports = {
   },
 
   login: function(req, res){
-    models.User.findOne({
+    User.findOne({
       where: {
         email: req.body.email
       }
@@ -133,5 +143,27 @@ module.exports = {
 
       }
     })
+  },
+
+  findTransactionByUser: function (req, res) {
+    if(User) {
+      User.findByPk(req.params.id, {
+        include: [
+          {
+            model: Transactions,
+            attributes: ["id", "amount"],
+            //required: true,
+            as: "transactions",
+          },
+        ],
+      }).then(users => {
+        res.json(users)
+      });
+    }else {
+      res.status(400).json({
+        status: 'Tidak Ditemukan',
+        message: 'Id Salah'
+      })
+    }
   }
 }
