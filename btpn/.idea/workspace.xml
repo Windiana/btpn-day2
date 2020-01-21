@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e9452e7-d847-4fe5-a0b7-92d5ed585bf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/20200115144325-create-users.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/20200115144325-create-users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/20200115151602-addColumnAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/20200115151602-addColumnAddress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/20200116061248-addColumpassword.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1WQ7M5SVOqqAYn2j9Qjl5FjQMhy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RunManager" selected="Mocha.User">
+    <configuration name="User" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/user_test.js</test-file>
+      <test-names>
+        <name value="User" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="User.GET /users.will return all user data" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/user_test.js</test-file>
+      <test-names>
+        <name value="User" />
+        <name value="GET /users" />
+        <name value="will return all user data" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.User" />
+        <item itemvalue="Mocha.User.GET /users.will return all user data" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e9452e7-d847-4fe5-a0b7-92d5ed585bf7" name="Default Changelist" comment="" />
+      <created>1579069913030</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579069913030</updated>
+      <workItem from="1579069922044" duration="14571000" />
+      <workItem from="1579142016402" duration="46517000" />
+      <workItem from="1579333001619" duration="1281000" />
+      <workItem from="1579369637298" duration="12855000" />
+      <workItem from="1579491898521" duration="23243000" />
+    </task>
+    <task id="LOCAL-00001" summary="menambahkan beberapa task tugas">
+      <created>1579161738841</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579161738841</updated>
+    </task>
+    <task id="LOCAL-00002" summary="menambahkan login dan regis">
+      <created>1579162914292</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579162914292</updated>
+    </task>
+    <task id="LOCAL-00003" summary="menambahkan fungsi JWT">
+      <created>1579163439562</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579163439562</updated>
+    </task>
+    <task id="LOCAL-00004" summary="menambahkan fungsi JWT">
+      <created>1579164250567</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579164250567</updated>
+    </task>
+    <task id="LOCAL-00005" summary="memperbaiki respon API password, email unique, pemakaian hook, token verify">
+      <created>1579254828716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579254828716</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="menambahkan beberapa task tugas" />
+    <MESSAGE value="menambahkan login dan regis" />
+    <MESSAGE value="menambahkan fungsi JWT" />
+    <MESSAGE value="memperbaiki secret JWT" />
+    <MESSAGE value="memperbaiki respon API password, email unique, pemakaian hook, token verify" />
+    <option name="LAST_COMMIT_MESSAGE" value="memperbaiki respon API password, email unique, pemakaian hook, token verify" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579235624987">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1579235624987" />
+    <state x="457" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579251777035">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="457" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1579251777035" />
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579101022719">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1579101022719" />
+    <state x="290" y="0" key="CommitChangelistDialog2" timestamp="1579254826561">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="290" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1579254826561" />
+    <state width="1345" height="32" key="GridCell.Tab.0.bottom" timestamp="1579508261058">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="32" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1579508261058" />
+    <state width="1345" height="32" key="GridCell.Tab.0.center" timestamp="1579508261058">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="32" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1579508261058" />
+    <state width="1345" height="32" key="GridCell.Tab.0.left" timestamp="1579508261058">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="32" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1579508261058" />
+    <state width="1345" height="32" key="GridCell.Tab.0.right" timestamp="1579508261058">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="32" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1579508261058" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1579254848577">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1579254848577" />
+    <state x="379" y="0" width="607" height="738" key="find.popup" timestamp="1579490334465">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="379" y="0" width="607" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1579490334465" />
+  </component>
+</project>
