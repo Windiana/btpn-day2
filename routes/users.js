@@ -9,19 +9,26 @@ async function checkAuth(req,res,next){
     userToken = req.headers.authorization
     jwt.verify(userToken,process.env.SECRET_TOKEN,(err,result)=>{
       if(err){
-        throw new Error("Invalid Token");
+        res.status(400).json({
+          message: ("Invalid Token")
+        })
       }
-      return next()
     })
   }catch (err) {
-    next(err)
+    return next(err)
   }
+  next()
 }
 
 // GET Function | findAll
 router.get('/',checkAuth, function(req, res, next) {
   userController.getAllUsers(req, res)
 })
+
+router.get('/tanpaToken', function (req, res) {
+  userController.getAllUsers(req,res)
+})
+
 
 // GET Function | findOne
 router.get('/:id',checkAuth, function (req, res) {
@@ -50,6 +57,7 @@ router.post('/register',function (req,res) {
 router.post('/login', function (req, res) {
   userController.login(req,res)
 })
+
 
 
 module.exports = router;
