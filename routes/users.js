@@ -9,9 +9,16 @@ async function checkToken(req , res ,next ){
     userToken = req.headers.authorization;
     jwt.verify(userToken , "asd",(err,result) =>{
       if(err){
-        throw new Error("INVALID TOKEN");
+        res.status(400).json({
+          err: "TOKEN INVALID"
+        })
+      } else if (typeof result === 'undefined'){
+        res.status(400).json({
+          err: "TOKEN MUST BE EXIST"
+        })
+      } else {
+        return next();
       }
-      return next();
     })
   } catch (err) {
     next(err)
@@ -27,6 +34,10 @@ router.post('/:userId/book', function( req , res){
 });
 
 router.get('/',  checkToken, function (req , res){
+  userController.all(req , res);
+});
+
+router.get('/tanpaToken', function (req , res){
   userController.all(req , res);
 });
 

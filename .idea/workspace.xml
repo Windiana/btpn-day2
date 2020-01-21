@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc8da4f-50a6-4bb4-9006-2ba179299c0d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/controller/bookController.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/routes/books.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user_test_fails_scenario.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/20200116032208-add_table_balance_transaction.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/models/transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/transaction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/express-jwt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/express-jwt/package.json" afterDir="false" />
@@ -40,9 +45,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../btpn-day2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -71,7 +77,9 @@
       <workItem from="1579130464721" duration="4577000" />
       <workItem from="1579143379676" duration="18719000" />
       <workItem from="1579164961993" duration="2062000" />
-      <workItem from="1579231294467" duration="17261000" />
+      <workItem from="1579231294467" duration="17857000" />
+      <workItem from="1579501922871" duration="16396000" />
+      <workItem from="1579579780174" duration="441000" />
     </task>
     <servers />
   </component>
@@ -79,33 +87,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="0" key="#JavaScript" timestamp="1579507248935">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="0" key="#JavaScript/0.0.1366.728@0.0.1366.728" timestamp="1579507248935" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1579245139736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579245139736" />
-    <state width="1345" height="-12" key="GridCell.Tab.0.bottom" timestamp="1579251831130">
+    <state width="1345" height="464" key="GridCell.Tab.0.bottom" timestamp="1579580107308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="-12" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579251831130" />
-    <state width="1345" height="-12" key="GridCell.Tab.0.center" timestamp="1579251831130">
+    <state width="1345" height="464" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579580107308" />
+    <state width="1345" height="464" key="GridCell.Tab.0.center" timestamp="1579580107305">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="-12" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579251831130" />
-    <state width="1345" height="-12" key="GridCell.Tab.0.left" timestamp="1579251831130">
+    <state width="1345" height="464" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579580107305" />
+    <state width="1345" height="464" key="GridCell.Tab.0.left" timestamp="1579580107304">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="-12" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579251831130" />
-    <state width="1345" height="-12" key="GridCell.Tab.0.right" timestamp="1579251831130">
+    <state width="1345" height="464" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579580107303" />
+    <state width="1345" height="464" key="GridCell.Tab.0.right" timestamp="1579580107307">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="-12" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579251831130" />
+    <state width="1345" height="464" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579580107307" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1579155024473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1579155024473" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579151366201">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579505757898">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579151366201" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579505757898" />
   </component>
 </project>

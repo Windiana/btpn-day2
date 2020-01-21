@@ -49,8 +49,7 @@ module.exports = {
 
     add : function (req ,res ){
         models.User.create({
-            name : req.body.firstName,
-            birthDay: req.body.lastName,
+            name : req.body.name,
             email : req.body.email,
             balance : req.body.balance,
             address : req.body.address,
@@ -68,19 +67,28 @@ module.exports = {
     //CREATE
     update : function (req , res){
         models.User.update({
-            name : req.body.firstName,
-            birthDay: req.body.lastName,
+            name : req.body.name,
+            birthDay: req.body.birthDay,
             email : req.body.email,
             balance : req.body.balance
         },{
             where: {
                 id : req.params.id
-            }
-        }).then(function(user){
-            res.status(201).json({
-                status: 'updated',
-                data : user
-            });
+            },
+            returning: true,
+            plain: true
+        }).then(function(){
+            models.User.findOne({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(function(user) {
+                res.status(201).json({
+                    status: 'updated',
+                    data : user
+                });
+            })
         }).catch(function(err){
 
         })
@@ -91,7 +99,7 @@ module.exports = {
                 id: req.params.id
             }
         }).then(function(user){
-            res.status(201).json({
+            res.status(200).json({
                 status: 'deleted',
                 data : user
             });
