@@ -21,9 +21,9 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    amount:{
+    amount: {
       type: DataTypes.FLOAT,
-      validate:{
+      validate: {
         isNumeric: {
           args: true,
           msg: "Format Amount Harus Angka"
@@ -37,13 +37,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {});
 
-  Transactions.beforeValidate((transactions, option) =>{
+  Transactions.beforeValidate((transactions, option) => {
     transactions.notes = transactions.notes.toUpperCase()
     return transactions
   });
 
-  Transactions.associate = function(models) {
-    Transactions.belongsTo(models.User, {  as: "users" });
+  Transactions.associate = function (models) {
+    Transactions.belongsTo(models.User, {as: "users"});
   };
   return Transactions;
 };

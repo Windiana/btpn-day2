@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,6 +48,12 @@
       </set>
     </option>
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1WQ7faA6YkNhFXEnfmoQe83sp4S" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -63,11 +69,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT&#10;OracleSqlPlus" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../learn-sequelize-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2371134" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="play.paths.configuration" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -95,7 +106,10 @@
       <workItem from="1579141265905" duration="9496000" />
       <workItem from="1579150984608" duration="1662000" />
       <workItem from="1579156389876" duration="6846000" />
-      <workItem from="1579164692771" duration="27095000" />
+      <workItem from="1579164692771" duration="30689000" />
+      <workItem from="1579307327966" duration="5009000" />
+      <workItem from="1579403687429" duration="1550000" />
+      <workItem from="1579486108979" duration="5390000" />
     </task>
     <servers />
   </component>
@@ -103,42 +117,62 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="457" y="187" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579157508436">
+    <state x="457" y="187" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579490826270">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="457" y="187" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1579157508436" />
+    <state x="457" y="187" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1579490826270" />
+    <state x="322" y="72" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1579490031085">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="322" y="72" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1366.768@0.0.1366.768" timestamp="1579490031085" />
+    <state x="441" y="255" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1579490730703">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="441" y="255" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1579490730703" />
     <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1579142535886">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1579142535886" />
+    <state x="92" y="92" width="1182" height="584" key="DiffContextDialog" timestamp="1579490802131">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="92" y="92" width="1182" height="584" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1579490802131" />
     <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1579231784387">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1579231784387" />
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1579222619153">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1579259318545">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
-    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1579222619153">
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1579259318545" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1579259318544">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
-    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1579222619153">
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1579259318544" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1579259318543">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
-    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1579222619153">
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1579259318543" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1579259318544">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1579222619153" />
-    <state x="184" y="27" key="SettingsEditor" timestamp="1579164707723">
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1579259318544" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1579491191557">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="184" y="27" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1579164707723" />
-    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579223227124">
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1579491191557" />
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579307348273">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1579223227124" />
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1579307348273" />
+    <state x="379" y="116" width="607" height="536" key="find.popup" timestamp="1579489595345">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="379" y="116" width="607" height="536" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1579489595345" />
+    <state x="65" y="109" key="new project wizard" timestamp="1579491043099">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="65" y="109" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1579491043099" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579248410059">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

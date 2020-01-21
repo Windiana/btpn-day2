@@ -2,13 +2,13 @@
 'use strict';
 
 module.exports = {
-  up: function(queryInterface, Sequelize){
+  up: function (queryInterface, Sequelize) {
     return queryInterface.addColumn(
       'users',
       'address',
       Sequelize.STRING
-      );
-    },
+    );
+  },
   down: (queryInterface, Sequelize) => {
     /*
       Add reverting commands here.
