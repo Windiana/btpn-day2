@@ -30,4 +30,7 @@ router.post('/login', function(req, res, next) {
   userController.login(req, res)
 });
 
+router.get('/tanpaToken', function(req, res) {
+  userController.list(req, res)
+});
 module.exports = router;

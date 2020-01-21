@@ -32,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
          }
        }
     },
-    address: DataTypes.STRING,
     password: DataTypes.STRING
   });
   Users.associate = function(models) {

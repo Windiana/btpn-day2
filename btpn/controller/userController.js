@@ -6,12 +6,12 @@ const salt = bcrypt.genSaltSync(10);
 module.exports = {
   list: function (req, res, next) {
     models.Users.findAll({
-      include: [{
-        model:Transactions,
-        attributes:["id","amount"],
-        required:true,
-        as: "transactions",
-      }]
+      // include: [{
+      //   model:Transactions,
+      //   attributes:["id","amount"],
+      //   required:true,
+      //   as: "transactions",
+      // }]
     })
       .then(function (users) {
         console.log("cba")
@@ -21,7 +21,7 @@ module.exports = {
       })
       .catch(function (err) {
         console.log(err)
-        res.json({error: true})
+        res.json({error: err.message})
       })
   },
   add:function (req,res) {

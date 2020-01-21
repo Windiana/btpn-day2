@@ -20,6 +20,9 @@ module.exports = {
       balance: {
         type: Sequelize.FLOAT
       },
+      password: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
